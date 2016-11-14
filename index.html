@@ -39,12 +39,12 @@
     });
   }
  var Today=new Date();
-　document.write("上個月日期是 " + Today.getFullYear()+ " 年 " + (Today.getMonth()) + " 月 " + Today.getDate() + " 日");
+　 //document.write("上個月日期是 " + Today.getFullYear()+ " 年 " + (Today.getMonth()) + " 月 " + Today.getDate() + " 日");
   //顯示日期
   
   //變數d為上個月的日期
   var d=(Today.getMonth())+"/"+Today.getDate()+"/"+Today.getFullYear();
-  document.write(d);
+  // document.write(d);
 
   window.fbAsyncInit = function() {
   FB.init({
@@ -98,7 +98,7 @@
     FB.api(
   '/me/posts',
   'GET',
-  {"fields":"created_time,privacy","since":"10/13/2013"},
+  {"fields":"created_time,privacy","since":"11/01/2015"},
   function(response) {
     var count=0;
     for (i = 0; i < response.data.length; i++) {
@@ -107,7 +107,7 @@
         count++;
      } 
     }
-     alert(count);
+     alert("2015/11 至今po文數："+count);
   }
 );
 
